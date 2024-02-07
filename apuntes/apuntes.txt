@@ -1,0 +1,51 @@
+mnist -> data set de imagenes de 28x28 lo pasaremos un vecto, (0,0), (0,28) -> poner la foto recta, tendrá 784 dimensiones.
+
+
+X = 784
+
+la salida serán 10 números por que mnisk devuelve valores del 0 al 9.
+
+las dimensiones de cada matriz de pesos, será una matrix de alto de 784 y de ancho (no definimos nosotros, 1000 en este caso), la salida será un vector de 1000 lo que hará que la B será un vector de 1000.
+
+W2 = 1000 (por que me vienen 1000) X 100 (lo he elegido yo, me lo puede inventar)
+
+Z3 será 100 x 10 por que vienen 3 y mnist solo devuelve 10 números, osea 100X10
+
+
+784*1
+784*1000
+1000*1
+1000*100
+100*10
+10*1
+
+
+todos random,
+
+pesos del 0 al 1 (np.zeroslike)
+
+bias con 0, por que se irán adaptando
+
+
+1- inicializar modelo, le pasos las dimensiones y inicializo los pesos random.
+w1,w2,w3 b1,b2,b3 inicializar estás matrices
+
+2- definir la función de activación (sigmoid y relu (en python)), probamos que funcionen bien.
+
+3- definir el forward (que sería el output) 
+
+
+layers abstracta con metodo forward
+
+- input implementar forward devuelve la x
+- activation implementa forward -> devuelve la relu(x)
+- Capa densa (Dense) forward -> (x@w) + b 
+
+
+def ReLU(x):
+    return x * (x > 0),
+    return np.maximum(x,0)
+
+Como multiplicar una matriz -> numpu.matmul las multiplicaciones se expresan con @ no con *
+
+
