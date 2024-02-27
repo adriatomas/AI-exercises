@@ -1,0 +1,55 @@
+dW1, dB, dW2, dB2 = backguardProp(x,n1,n2,y_pred,y)
+
+
+update_parameters() ->  parametro = w - dW * learning_rate
+
+
+función entrenamiento fit()
+
+Le tengo que pasar un conjuntos de X y de Y del dataset (a esto se le llama batch de datos) de 500 en 500 por que si no la RAM peta
+
+  x,y = batch
+  y_pred = forward_all(Model, X)
+
+
+  HACEMOS EL BACKGUARD:
+  dW1,dB1,dW2, dB2, dW3, dB3 = backward(x, y_pred, y n1, n2, n3)
+
+  ACTUALIZAMOS PARAMETROS:
+  update_parameters(Model, ...etc)
+
+def test(data):
+
+  y_pred,_,_,_,_ = forward(X)
+  accuracy(y_pred, y)
+
+
+
+
+
+main
+  load_dataset()
+  split_dataset()
+
+  separar el dataset en 500 en 500 para poder entrenar el modelo.
+
+  initialize_model -> inicializar las constants w1,w1...etc
+
+
+  epocas (epochs)
+
+  while epoch < epochs:
+
+    for batch in enumerate (train_data,batch_size) -> iteramos todos los batches (el batch size es para que el enumerate coja de 500 en 500)
+      train(batch)
+
+    test(test_data) -> print la función de coste y la accuracy (hay prints que se eliminan)
+
+
+    if (accuracy > 0.97) {
+      break
+    }
+
+    epoch++
+
+guardamos el modelo en un csv (son todos los pesos y los biash)

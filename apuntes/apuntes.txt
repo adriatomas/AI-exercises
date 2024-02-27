@@ -49,3 +49,42 @@ def ReLU(x):
 Como multiplicar una matriz -> numpu.matmul las multiplicaciones se expresan con @ no con *
 
 
+
+7-02-2024
+______________________________________________________________________________________
+
+
+Cómo tratar el output de la ia.
+
+Crear función fuera del código, la función de coste: (y_pred - y-real)²
+
+Eliminar, la última relu que tenemos implementada en el modelo.
+
+
+Función de coste: Te dice como van de bien los pesos que hemos asignado, para ver la pendiente que sigue con los pesos actuales, se tendría hacer la derivada de la función de coste, respecto a las propiedades, (el gradiente de la función de coste)
+
+
+C0 = error, lo utilizaré para mejorar los pesos de la primera capa.
+
+Depende de la n3 y de la 'y'.
+
+n3 = n2 @ w2 + b2
+
+D' = Derivada
+
+N3 = y_pred
+
+/ -> respecto de 
+
+D'C0 / D'W3 =  D'(y_pred(n3) - y-real)² / D'w3 = (D'(n3-1)² / D'N3) * D'N3/D'W3
+
+
+2(n3-y) * n2
+
+dW3 = 2(N3-y)N2
+
+
+D'C0 / D'B3 = D'B3 = 2(N3-y) * 1
+
+Todo lo de arriba es para calcular lo ultimo W3 y B3. Pero tenemos que propagar el error hacía hacer (w2,b2 etc)
+
