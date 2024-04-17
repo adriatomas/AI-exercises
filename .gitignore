@@ -6,3 +6,5 @@
 pytorch/skin-cancer-prediction/data/*
 pytorch/skin-cancer-prediction/test/*
 pytorch/skin-cancer-prediction/train/*
+Examen/100-birds*
+resnet/audios-dataset/*
